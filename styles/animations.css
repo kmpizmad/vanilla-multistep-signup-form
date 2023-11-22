@@ -1,0 +1,14 @@
+.fade {
+	animation: fade 200ms ease-in-out 1;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-50%);
+	}
+}

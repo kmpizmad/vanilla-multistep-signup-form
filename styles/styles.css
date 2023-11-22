@@ -1,0 +1,214 @@
+:root {
+	--primary: #674ddc;
+	--background: #7e69e1;
+	--neutral: #f8f8f8;
+	--text: #9b90e8;
+	--disabled: #d2cedf;
+
+	--icon-size: 40px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Containers */
+.form-container {
+	width: 60%;
+	max-height: 650px;
+	background-color: #fff;
+	padding: 1rem;
+	overflow: hidden;
+	box-shadow: 2px 3px 8px 3px var(--primary);
+}
+
+.form-progress-container {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	margin: 1.5rem 0;
+}
+
+.form-icon-container {
+	display: flex;
+	align-items: center;
+}
+
+.form-body-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+#form-body,
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.form-group {
+	margin-bottom: 0.5rem;
+}
+
+/* Texts */
+.form-title,
+.form-subtitle {
+	margin: 0.5rem 0;
+	text-align: center;
+}
+
+.form-title {
+	text-transform: uppercase;
+	font-weight: 400;
+	color: var(--text);
+}
+
+.form-subtitle {
+	font-size: 1rem;
+	font-weight: 300;
+	color: #b3a7a6;
+}
+
+.form-progress-icon .icon-title {
+	color: var(--disabled);
+	font-size: 0.75rem;
+	transition: all 200ms ease-out;
+}
+
+.form-progress-icon.active .icon-title {
+	color: var(--primary);
+	font-size: 1rem;
+}
+
+/* Icons */
+.form-progress-icon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.form-progress-icon .icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: var(--icon-size);
+	height: var(--icon-size);
+	padding: 0.75rem;
+	border-radius: 999px;
+	background-color: var(--disabled);
+	transition: all 200ms ease-out;
+}
+
+.form-progress-icon.active .icon {
+	--icon-size: 50px;
+}
+
+.form-progress-icon.active .icon {
+	background-color: var(--primary);
+}
+
+.form-progress-icon .line {
+	width: 40px;
+	height: 1.5px;
+	background-color: var(--disabled);
+	transition: all 250ms ease-in;
+}
+
+.form-progress-icon.active:last-child .line:last-child,
+.form-progress-icon .line-active {
+	background-color: var(--background);
+}
+
+.form-progress-icon .icon svg {
+	color: var(--neutral);
+}
+
+/* Inputs */
+.form-control {
+	padding: 0.75rem 1rem;
+	outline: 0;
+	border: 1px solid var(--disabled);
+	background-color: var(--neutral);
+	transition: all 200ms ease-out;
+}
+
+.form-control:focus {
+	border-color: var(--background);
+}
+
+.form-img-upload {
+	display: none;
+}
+
+#image-upload {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: calc(var(--icon-size) * 5);
+	height: calc(var(--icon-size) * 5);
+	background-color: #bbb;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 1px solid transparent;
+	border-radius: 999px;
+	color: var(--neutral);
+	cursor: pointer;
+}
+
+.submit-button {
+	width: 100%;
+	background-color: var(--primary);
+	border: 1px solid var(--background);
+	outline: 0;
+	color: var(--neutral);
+	margin-top: 0.5rem;
+	padding: 0.75rem 1rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: 300;
+	transition: all 200ms ease-out;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+	background-color: var(--background);
+}
+
+/* Utils */
+.centered {
+	justify-content: center;
+	align-items: center;
+}
+
+.success {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--disabled);
+	border: 1px solid var(--primary);
+	border-radius: 999px;
+	width: calc(var(--icon-size) * 4);
+	height: calc(var(--icon-size) * 4);
+	color: var(--primary);
+}
+
+.hidden {
+	display: none;
+}

@@ -1,0 +1,38 @@
+.form-steps {
+	display: grid;
+	grid-template-columns: repeat(4, 100%);
+	align-items: center;
+}
+
+.form-step {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 360px;
+	overflow-y: auto;
+	opacity: 0;
+	transition: all 200ms ease-in-out;
+}
+
+.form-step::-webkit-scrollbar {
+	width: 5px;
+	background-color: transparent;
+	border-radius: 999px;
+	margin: 5px;
+}
+
+.form-step::-webkit-scrollbar-thumb {
+	background-color: var(--text);
+	border-radius: 999px;
+}
+
+#form-step-title,
+.form-label {
+	color: var(--text);
+}
+
+#form-step-title {
+	font-size: 1.5rem;
+	font-weight: 400;
+	border-bottom: 2px solid var(--text);
+}
